@@ -1,0 +1,44 @@
+vsim -gui work.four_bit_full_adder
+# vsim -gui work.four_bit_full_adder 
+# Start time: 22:02:10 on Aug 31,2021
+# Loading std.standard
+# Loading work.four_bit_full_adder(struct)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.one_bit_full_adder(behav)
+add wave -position end  sim:/four_bit_full_adder/A
+add wave -position end  sim:/four_bit_full_adder/B
+add wave -position end  sim:/four_bit_full_adder/Cin
+add wave -position end  sim:/four_bit_full_adder/S
+add wave -position end  sim:/four_bit_full_adder/Cout
+force -freeze sim:/four_bit_full_adder/A 0001 0
+force -freeze sim:/four_bit_full_adder/B 0100 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 0010 0
+force -freeze sim:/four_bit_full_adder/B 1100 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 0011 0
+force -freeze sim:/four_bit_full_adder/B 0011 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 1100 0
+force -freeze sim:/four_bit_full_adder/B 1100 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 1111 0
+force -freeze sim:/four_bit_full_adder/B 0000 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 1111 0
+force -freeze sim:/four_bit_full_adder/B 1111 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 0100 0
+force -freeze sim:/four_bit_full_adder/B 0011 0
+run
+
+force -freeze sim:/four_bit_full_adder/A 0011 0
+force -freeze sim:/four_bit_full_adder/B 0100 0
+run
